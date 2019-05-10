@@ -2,6 +2,7 @@
 <html>
     <head>
         <script src="https://d3js.org/d3.v4.min.js"></script>
+        <title>Stoplight</title>
     </head>
     <body>
         <svg id="svg" style="width:100%; height:800px"/>
@@ -21,18 +22,21 @@
                        .attr('cx', 200)
                        .attr('cy', 100)
                        .attr('r', 75)
+                       .attr('id', 'red')
                        .style('fill', 'grey');
 
         const yellow = svg.append('circle')
                           .attr('cx', 200)
                           .attr('cy', 260)
                           .attr('r', 75)
+                          .attr('id', 'yellow')
                           .style('fill', 'grey');
 
         const green = svg.append('circle')
                          .attr('cx', 200)
                          .attr('cy', 420)
                          .attr('r', 75)
+                         .attr('id', 'green')
                          .style('fill', 'grey');
 
         red.on('click', () => {
